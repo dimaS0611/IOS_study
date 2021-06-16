@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatOrDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7By-5L-20o">
+                                <rect key="frame" x="20" y="44" width="378" height="33"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="GT8-N8-NRc">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej0-pm-CBS">
+                                                <rect key="frame" x="0.0" y="0.0" width="146.5" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="VKl-uG-YN6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Take photo"/>
+                                                <connections>
+                                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaG-Rm-OVh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tO-pG-1so">
+                                                <rect key="frame" x="196.5" y="0.0" width="181.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Pick image"/>
+                                                <connections>
+                                                    <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI5-yF-nY9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neF-rx-0ma">
+                                <rect key="frame" x="166" y="751" width="86" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Classify">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="heavy"/>
+                                </state>
+                                <connections>
+                                    <action selector="classify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C9j-09-3bn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw5-p7-z9Z">
+                                <rect key="frame" x="117" y="636" width="184" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="2Or-ra-ZF3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BiX-lg-YEG">
+                                <rect key="frame" x="34" y="241" width="350" height="350"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="KTg-5L-QM6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kw5-p7-z9Z" firstAttribute="top" secondItem="BiX-lg-YEG" secondAttribute="bottom" constant="45" id="9Ug-qP-RPO"/>
+                            <constraint firstItem="7By-5L-20o" firstAttribute="centerX" secondItem="BiX-lg-YEG" secondAttribute="centerX" id="M3a-JI-D7D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="neF-rx-0ma" secondAttribute="bottom" constant="69" id="OIi-oR-Xg3"/>
+                            <constraint firstItem="7By-5L-20o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VDu-Kd-lR8"/>
+                            <constraint firstItem="kw5-p7-z9Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="eXc-6r-5bc"/>
+                            <constraint firstItem="kw5-p7-z9Z" firstAttribute="centerX" secondItem="neF-rx-0ma" secondAttribute="centerX" id="fGm-UV-jFT"/>
+                            <constraint firstItem="kw5-p7-z9Z" firstAttribute="centerX" secondItem="BiX-lg-YEG" secondAttribute="centerX" id="kMG-y9-5SG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7By-5L-20o" secondAttribute="trailing" constant="16" id="rAS-56-YU4"/>
+                            <constraint firstItem="7By-5L-20o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sC7-aa-2NY"/>
+                            <constraint firstItem="BiX-lg-YEG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="tPK-u6-Qid"/>
+                            <constraint firstItem="BiX-lg-YEG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="241" id="y8f-dL-QPe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="classificationResultLabel" destination="kw5-p7-z9Z" id="vqB-4F-96r"/>
+                        <outlet property="takeImage" destination="BiX-lg-YEG" id="QFL-Oc-okh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
